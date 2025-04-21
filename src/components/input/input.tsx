@@ -7,7 +7,7 @@ interface Props {
   type?: string;
   value: string;
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  handleBlur?: (e: React.FocusEvent<HTMLInputElement>) => void; // ← importante
+  handleBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
   error?: string;
 }
 
@@ -29,7 +29,7 @@ const Input: React.FC<Props> = ({
         name={name}
         value={value}
         onChange={handleChange}
-        onBlur={handleBlur} // ← importante
+        onBlur={handleBlur}
         className={error ? styles.errorInput : ""}
       />
       {error && <span className={styles.error}>{error}</span>}
